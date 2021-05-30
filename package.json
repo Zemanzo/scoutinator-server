@@ -1,0 +1,24 @@
+{
+  "name": "plakkert-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": {
+    "name": "Merlijn van der Kamp",
+    "email": "merlijnvanderkamp@gmail.com",
+    "url": "https://merlijn.me/"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^7.1.2",
+    "fastify": "^3.9.2",
+    "fastify-cors": "^5.1.0",
+    "simple-node-logger": "^18.12.24"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^7.1.0",
+    "prettier": "^2.2.1"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
