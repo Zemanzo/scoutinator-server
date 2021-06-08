@@ -1,3 +1,4 @@
+const {createReadStream: fsCreateReadStream} = require("fs");
 const fs = require("fs").promises;
 const path = require("path");
 const config = require("../config.json");
@@ -39,7 +40,20 @@ const getDirectoryImages = async (directory) => {
   return (await getDirectoryContents(directory)).filter(entry => entry.type === "image");
 }
 
+const getImageStream = async (imagePath) => {
+  const absolutePath = path.join(ROOT_DIRECTORY, imagePath);
+  console.log(absolutePath);
+
+  if (!absolutePath.includes(ROOT_DIRECTORY)) {
+    throw new Error(
+      "The requested directory is higher than the root directory, which is not allowed."
+    );
+  }
+  return fsCreateReadStream(absolutePath);
+};
+
 module.exports = {
   getDirectoryContents,
-  getDirectoryImages
+  getDirectoryImages,
+  getImageStream,
 };
