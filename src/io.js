@@ -5,7 +5,7 @@ const config = require("../config.json");
 const ROOT_DIRECTORY = path.resolve(config.root);
 
 const _hasImageExtension = name => {
-  return [".jpg", ".jpeg", ".png", ".gif", "webp"].some((ext) =>
+  return [".jpg", ".jpeg", ".png", ".gif", ".webp", ".bmp"].some((ext) =>
     name.endsWith(ext)
   );
 };

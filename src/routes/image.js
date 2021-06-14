@@ -8,6 +8,7 @@ async function routes(fastify, options) {
       res
         .code(200)
         .header("Content-Type", "application/octet-stream")
+        .header("Timing-Allow-Origin", "http://localhost:3000")
         .send(imageStream);
     } catch (err) {
       console.error(err);
