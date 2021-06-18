@@ -1,4 +1,4 @@
-# Scoutinator
+# Scoutinator Server
 
 This project is built in combination with [scoutinator](https://github.com/Zemanzo/scoutinator) which is the frontend that uses this backend.
 
